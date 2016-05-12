@@ -81,20 +81,10 @@ i.fa.fa-search.fa-4x {
   margin: 180px 100px 0;
   padding: 40px 0;
 }
-.wikipedia-container {
+/*.wikipedia-container {
   background-color: #adbed9;
   z-index: 5;
   padding: 10px;
   margin: 20px 40px;
   right: 50%;
-}
-#title {
-  z-index: 9;
-  background-color: #fff;
-  color: #000;
-}
-#content {
-  z-index: 10;
-  background-color: white;
-  color: #000;
-}
+}*/
