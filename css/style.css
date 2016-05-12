@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #0d2647;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+}
+#wrap {
+  margin: -60px auto 120px;
+  display: inline-block;
+  left: -25%;
+  position: relative;
+  height: 60px;
+  float: right;
+  padding: 0;
+}
+input[type="text"] {
+  height: 60px;
+  font-size: 55px;
+  display: inline-block;
+  font-family: Lato, sans-serif;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #aaa;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 700px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+input[type="submit"],
+input[type="submit"]:after {
+  height: 67px;
+  width: 63px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: transparent center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+  margin-top: -15px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+i.fa.fa-search.fa-4x {
+  color: #aaa;
+  margin-top: -15px;
+}
+.section {
+  margin: 180px 100px 0;
+  padding: 40px 0;
+}
+.wikipedia-container {
+  background-color: #adbed9;
+  z-index: 5;
+  padding: 10px;
+  margin: 20px 40px;
+  right: 50%;
+}
+#title {
+  z-index: 9;
+  background-color: #fff;
+  color: #000;
+}
+#content {
+  z-index: 10;
+  background-color: white;
+  color: #000;
+}
