@@ -31,7 +31,7 @@ function wikiViewer() {
           for (var i = 0; i < articleList.length; i++) {
             articleStr = articleList[i];
             wikiURL = "http://en.wikipedia.org/wiki/" + articleStr + wikiURLEnd;
-            $wikiElem.append('<li><a href="' + url + '">' + articleStr + wikiURLEnd + '</a></li>');
+            $('wikipedia-container').append('<li><a href="' + url + '">' + articleStr + wikiURLEnd + '</a></li>');
           }
         }
     });
