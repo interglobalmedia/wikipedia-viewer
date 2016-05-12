@@ -7,7 +7,7 @@ $(document).ready(function() {
   $("#search_submit").submit(function() {
     $('.wikipedia-container').show();
   });
-  $.getJSON("https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch="+sq+"&srnamespace=0&srwhat=text&titles=Main%20Page&callback=?", function() {
+  $.getJSON("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Main%20Page&prop=revisions&rvprop=content", function() {
     var html = '';
     json.forEACH(function(val) {
       html +="<div class='wikipedia-container'>";
