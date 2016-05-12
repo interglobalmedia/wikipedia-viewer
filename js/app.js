@@ -2,10 +2,8 @@
 // Making a normal json request to wikipedia would result in a cross origin or cross site error
 // because wikipedia servers forbid cross origin requests.
 // Wikipedia AJAX request goes here
-$('.wikipedia-container').hide();
 $(document).ready(function() {
   $("#search_submit").submit(function() {
-    $('.wikipedia-container').show();
   });
   $.getJSON("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Main%20Page&prop=revisions&rvprop=content", function() {
     var html = '';
