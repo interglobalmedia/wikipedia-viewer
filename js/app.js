@@ -2,42 +2,22 @@
 // Making a normal json request to wikipedia would result in a cross origin or cross site error
 // because wikipedia servers forbid cross origin requests.
 // Wikipedia AJAX request goes here
-
-function wikiViewer() {
-  var theTitle = '';
-  var theContent = '';
-  createView();
-  $('input[type="submit"]').on('click', function() {
-    createView();
+$('.wikipedia-container').hide();
+$(document).ready(function() {
+  $("#search_submit").submit(function() {
+    $('.wikipedia-container').show();
   });
-
-  function createView() {
-    var wikiURL;
-    var wikiURLStart = 'http://en.wikipedia.org/w/api.php?action=opensearch&search='
-    var articleStr;
-    var wikiURLEnd = '&format=json&callback=wikiCallback';
-
-    $.ajax({
-        url: wikiURL,
-        type: 'GET',
-        data: {},
-        dataType: 'jsonp',
-        success: function(data) {
-          theTitle = data.title;
-          theContent = data.content;
-          $('#title').html() = theTitle;
-          $('#content').html() = theContent;
-
-          for (var i = 0; i < articleList.length; i++) {
-            articleStr = articleList[i];
-            wikiURL = "http://en.wikipedia.org/wiki/" + articleStr + wikiURLEnd;
-            $('wikipedia-container').append('<li><a href="' + url + '">' + articleStr + wikiURLEnd + '</a></li>');
-          }
-        }
+  $.getJSON("https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch="+sq+"&srnamespace=0&srwhat=text&titles=Main%20Page&callback=?", function() {
+    var html = '';
+    json.forEACH(function(val) {
+      html +="<div class='wikipedia-container'>";
+      html +="<a href='" + val.wikiLink + "'>";
+      html +="</a>";
+      html +="</div>";
     });
-  }
-}
-wikiViewer();
+    $(".wikipedia-container").html(html);
+  });
+});
 /* :)
 
 What needs to be done in this program:
