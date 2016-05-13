@@ -1,24 +1,25 @@
 // Don't need an API key.
 // Making a normal json request to wikipedia would result in a cross origin or cross site error
 // because wikipedia servers forbid cross origin requests.
-// Wikipedia AJAX request goes here
-$(document).ready(function() {
-  $("#search_submit").submit(function() {
-  });
-  $.getJSON("http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Main%20Page&prop=revisions&rvprop=content", function() {
-    var html = '';
-    json.forEACH(function(val) {
-      html +="<div class='wikipedia-container'>";
-      html +="<a href='" + val.wikiLink + "'>";
-      html +="</a>";
-      html +="</div>";
+$('#searchterm').keyup(function(e) {
+  // query variable
+  var q = $("#searchterm").val();
+  $.getJSON("http://en.wikipedia.org/w/api.php?callback=?",
+  {
+    srsearch: q,
+    action: "query",
+    list: "search",
+    format: "json"
+  },
+  function(data) {
+    $(".section").empty();
+    $(".section").append("Results for <b>" + q + "</b>");
+    $.each(data.query.search, function(i, item) {
+      $(".section").append("<div id='results'><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + item.title + "</a>" + item.snippet + "</articles>");
     });
-    $(".wikipedia-container").html(html);
   });
 });
-/* :)
-
-What needs to be done in this program:
+/* /* What needs to be done in this program:
 
   1. User inputs a search query and submits.
     - We need to take the text-area's input.
