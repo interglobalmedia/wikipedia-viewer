@@ -9,12 +9,11 @@
 </head>
 <body>
 <div id="wrap">
-  <form action="" autocomplete="on">
-    <input id="search" name="search" type="text" placeholder="Search Wikipedia"><i class="fa fa-search fa-4x" aria-hidden="true"></i><input id="search_submit" value="Rechercher" type="submit">
-  </form>
+    <input id="searchterm" name="search" type="text" placeholder="Search Wikipedia" autocomplete="off" required="required"><button type="submit" id="search"><i class="fa fa-search fa-4x" aria-hidden="true"></i></button><input id="search_submit" value="Rechercher" type="submit">
 </div>
 <div class="section">
-<div id="view" class="wikipedia-container">
+<div id="results">
+</div>
 </div>
 </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
