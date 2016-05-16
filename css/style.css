@@ -102,10 +102,6 @@ button {
   color: #0d2647;
   letter-spacing: 0.06em;
 }
-.flex-container {
-  display: flex;
-  justify-content: center;
-}
 .footer {
   position: fixed;
   right: 0;
