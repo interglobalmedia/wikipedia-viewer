@@ -7,6 +7,8 @@ function wikiViewer() {
     var q = $("#searchterm").val();
     $.getJSON("http://en.wikipedia.org/w/api.php?callback=?",
     {
+      // srsearch param: search for all page titles (or content)
+      // that have this value. https://www.mediawiki.org/wiki/API:Search
       srsearch: q,
       action: "query",
       list: "search",
