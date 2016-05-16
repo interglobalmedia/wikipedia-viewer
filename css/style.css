@@ -80,12 +80,11 @@ input[type="submit"]:after {
   transition: opacity .4s ease;
   margin-top: -5px;
 }
-#search_submit {
-  outline: none;
-}
-
 input[type="submit"]:hover {
   opacity: 0.8;
+}
+#search_submit {
+  outline: none;
 }
 button {
   background: transparent;
@@ -131,11 +130,11 @@ button:after {
 }
 
 @media(max-width: 768px) {
-  input[type="text"]:focus {
-    width: 300px;
-  }
   input[type="text"] {
     font-size: 28px;
+  }
+  input[type="text"]:focus {
+    width: 300px;
   }
   button:after {
     font-size: 40px;
