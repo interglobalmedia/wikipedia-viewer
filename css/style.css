@@ -13,7 +13,7 @@ p:first-child {
   text-align: center;
 }
 #wrap {
-  margin: -60px auto;
+  margin: 60px auto;
   position: relative;
   left: -12%;
   height: 60px;
