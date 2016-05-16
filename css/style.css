@@ -116,6 +116,9 @@ button:after {
   color: #0d2647;
   letter-spacing: 0.06em;
 }
+.section #results:hover {
+  background-color: #ddd1db;
+}
 .footer {
   position: fixed;
   right: 0;
