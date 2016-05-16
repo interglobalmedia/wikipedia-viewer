@@ -13,12 +13,23 @@ p:first-child {
   text-align: center;
 }
 #wrap {
-  margin: -60px auto;
+  margin: 60px auto;
   position: relative;
   left: -12%;
   height: 60px;
   float: right;
   padding: 0;
+}
+.random {
+  margin: 60px auto 0;
+  text-align: center;
+}
+.random a {
+  text-decoration: none;
+  color: #aaa;
+}
+.random a:hover {
+  color: #efefef;
 }
 input[type="text"] {
   height: 60px;
@@ -40,16 +51,14 @@ input[type="text"] {
   transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
   cursor: pointer;
 }
-
-input[type="text"]:focus:hover {
-  border-bottom: 1px solid #BBB;
-}
-
 input[type="text"]:focus {
   width: 400px;
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;
+}
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
 }
 input[type="submit"],
 input[type="submit"]:after {
@@ -71,17 +80,22 @@ input[type="submit"]:after {
   transition: opacity .4s ease;
   margin-top: -5px;
 }
+#search_submit {
+  outline: none;
+}
 
 input[type="submit"]:hover {
   opacity: 0.8;
 }
-i.fa.fa-search.fa-4x {
-  color: #aaa;
-  margin: 5px 8px 10px 5px;
-}
 button {
   background: transparent;
   border: none;
+}
+button:after {
+  content: '\f002';
+  font-family: 'FontAwesome';
+  font-size: 48px;
+  color: #aaa;
 }
 .section {
   margin: 180px 40px 0;
@@ -102,6 +116,9 @@ button {
   color: #0d2647;
   letter-spacing: 0.06em;
 }
+.section #results:hover {
+  background-color: #efefef;
+}
 .footer {
   position: fixed;
   right: 0;
@@ -119,5 +136,19 @@ button {
   }
   input[type="text"] {
     font-size: 28px;
+  }
+  button:after {
+    font-size: 40px;
+  }
+}
+@media(max-width: 360px) {
+  #wrap {
+    left: -8%;
+  }
+  input[type="text"] {
+    font-size: 24px;
+  }
+  input[type="text"]:focus {
+    width: 275px;
   }
 }
