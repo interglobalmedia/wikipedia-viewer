@@ -9,18 +9,20 @@ body {
   font-family: Lato, sans-serif;
   font-size: 16px;
 }
+p:first-child {
+  text-align: center;
+}
 #wrap {
-  margin: -60px auto 120px;
-  display: inline-block;
-  left: -25%;
+  margin: -60px auto;
   position: relative;
+  left: -12%;
   height: 60px;
   float: right;
   padding: 0;
 }
 input[type="text"] {
   height: 60px;
-  font-size: 55px;
+  font-size: 36px;
   display: inline-block;
   font-family: Lato, sans-serif;
   font-weight: 100;
@@ -44,7 +46,7 @@ input[type="text"]:focus:hover {
 }
 
 input[type="text"]:focus {
-  width: 700px;
+  width: 400px;
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;
@@ -67,7 +69,7 @@ input[type="submit"]:after {
   opacity: 0.4;
   cursor: pointer;
   transition: opacity .4s ease;
-  margin-top: -15px;
+  margin-top: -5px;
 }
 
 input[type="submit"]:hover {
@@ -75,26 +77,47 @@ input[type="submit"]:hover {
 }
 i.fa.fa-search.fa-4x {
   color: #aaa;
-  margin-top: -15px;
+  margin: 5px 8px 10px 5px;
+}
+button {
+  background: transparent;
+  border: none;
 }
 .section {
-  margin: 180px 100px 0;
+  margin: 180px 40px 0;
   padding: 40px 0;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  color: #b3b4b6;
 }
-.wikipedia-container {
+#results {
   background-color: #adbed9;
   z-index: 5;
   padding: 10px;
   margin: 20px 40px;
   right: 50%;
 }
-#title {
-  z-index: 9;
-  background-color: #fff;
-  color: #000;
+.section #results {
+  color: #0d2647;
+  letter-spacing: 0.06em;
 }
-#content {
-  z-index: 10;
-  background-color: white;
-  color: #000;
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  color: #0d2647;
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  input[type="text"]:focus {
+    width: 300px;
+  }
+  input[type="text"] {
+    font-size: 28px;
+  }
 }
