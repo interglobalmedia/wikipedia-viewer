@@ -19,6 +19,7 @@ function wikiViewer() {
       $(".section").append("Results for <b>" + q + "</b>");
       $.each(data.query.search, function(i, item) {
         $(".section").append("<div id='results'><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + item.title + "</a>: " + item.snippet + "</div>");
+        $("div #results a[href^='http://']").attr("target","_blank");
       });
     });
   });
