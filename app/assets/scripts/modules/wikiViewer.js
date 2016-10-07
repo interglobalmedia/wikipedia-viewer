@@ -1,3 +1,4 @@
+import $ from 'jquery';
 // Don't need an API key.
 // Making a normal json request to wikipedia would result in a cross origin or cross site error
 // because wikipedia servers forbid cross origin requests.
@@ -18,13 +19,13 @@ function wikiViewer() {
       $(".section").empty();
       $(".section").append("Results for <b>" + q + "</b>");
       $.each(data.query.search, function(i, item) {
-        $(".section").append("<div id='results'><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + item.title + "</a>: " + item.snippet + "</div>");
+        $(".section").append("<div id='results'><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + "<h4> " + item.title + "</h4> " + item.snippet + "</a></div>");
         $("div #results a[href^='http://']").attr("target","_blank");
       });
     });
   });
 }
-wikiViewer();
+export default wikiViewer;
 /* /* What needs to be done in this program:
 
   1. User inputs a search query and submits.
