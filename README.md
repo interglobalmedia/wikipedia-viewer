@@ -13,3 +13,5 @@ Hint #1: Here's a URL you can use to get a random Wikipedia article: https://en.
 Hint #2: Here's an entry on using Wikipedia's API: https://www.mediawiki.org/wiki/API:Main_page
 
 Hint #3: Use this link to experiment with Wikipedia's API.
+
+As time wore on and I learned more on my own, I decided that I had to upscale some projects, including this one. I added modularization and a Gulp workflow (looove Gulp), and revamped the visuals/functionality for the search bar. Once you get a taste of what all this does for you regarding your code and time saving, there is no going back!
