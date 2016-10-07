@@ -10,7 +10,8 @@
     "scripts": "gulp scripts",
     "modernizr": "gulp modernizr",
     "build": "gulp build",
-    "previewDist": "gulp previewDist"
+    "previewDist": "gulp previewDist",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
