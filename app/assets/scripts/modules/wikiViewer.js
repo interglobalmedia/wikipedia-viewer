@@ -3,9 +3,9 @@ import $ from 'jquery';
 // Making a normal json request to wikipedia would result in a cross origin or cross site error
 // because wikipedia servers forbid cross origin requests.
 function wikiViewer() {
-  $('#searchterm').keyup(function(e) {
+  $('#searchterm').keyup(e => {
     // query variable
-    var q = $("#searchterm").val();
+    const q = $("#searchterm").val();
     $.getJSON("http://en.wikipedia.org/w/api.php?callback=?",
     {
       // srsearch param: search for all page titles (or content)
@@ -16,9 +16,9 @@ function wikiViewer() {
       format: "json"
     },
     data => {
-      let el = `Results for <b> ${q} </b>`;
+      const el = `Results for <b> ${q} </b>`;
       $(".section").empty().append(el);
-      $.each(data.query.search, function(i, item) {
+      $.each(data.query.search, (i, item) => {
         $(".section").append(`<div id='results'><a href='http://en.wikipedia.org/wiki/' ${encodeURIComponent(item.title)}> <h4> ${item.title} </h4>  ${item.snippet} </a></div>`);
         $("div #results a[href^='http://']").attr("target","_blank");
       });
