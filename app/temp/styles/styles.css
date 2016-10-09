@@ -513,7 +513,7 @@ a {
   margin: 60px 8px 7px 0;
   padding: 7px 9px 0 9px;
   border: 3px solid #efefef;
-  border-radius: 25px;
+  border-radius: 35px;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   cursor: text;
@@ -546,7 +546,7 @@ a {
   margin-right: 0;
 }
 
-.search .active:after {
+.search.active:after, .search:hover:after {
   height: 0;
 }
 

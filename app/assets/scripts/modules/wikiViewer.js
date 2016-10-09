@@ -15,11 +15,11 @@ function wikiViewer() {
       list: "search",
       format: "json"
     },
-    function(data) {
-      $(".section").empty();
-      $(".section").append("Results for <b>" + q + "</b>");
+    data => {
+      let el = `Results for <b> ${q} </b>`;
+      $(".section").empty().append(el);
       $.each(data.query.search, function(i, item) {
-        $(".section").append("<div id='results'><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + "<h4> " + item.title + "</h4> " + item.snippet + "</a></div>");
+        $(".section").append(`<div id='results'><a href='http://en.wikipedia.org/wiki/' ${encodeURIComponent(item.title)}> <h4> ${item.title} </h4>  ${item.snippet} </a></div>`);
         $("div #results a[href^='http://']").attr("target","_blank");
       });
     });
