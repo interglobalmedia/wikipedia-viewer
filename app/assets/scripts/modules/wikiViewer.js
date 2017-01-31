@@ -19,8 +19,8 @@ function wikiViewer() {
       const el = `Results for <b> ${q} </b>`;
       $(".section").empty().append(el);
       $.each(data.query.search, (i, item) => {
-        $(".section").append(`<div id='results'><a href='http://en.wikipedia.org/wiki/' ${encodeURIComponent(item.title)}> <h4> ${item.title} </h4>  ${item.snippet} </a></div>`);
-        $("div #results a[href^='http://']").attr("target","_blank");
+        $(".section").append(`<div id='results'><a href='http://en.wikipedia.org/wiki/${item.title}' ${encodeURIComponent(item.title)}> <h4> ${item.title} </h4>  ${item.snippet} </a></div>`);
+        $("div #results a[href^='http://']" ).attr("target","_blank");
       });
     });
   });

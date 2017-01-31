@@ -10323,7 +10323,7 @@
 	      var el = 'Results for <b> ' + q + ' </b>';
 	      (0, _jquery2.default)(".section").empty().append(el);
 	      _jquery2.default.each(data.query.search, function (i, item) {
-	        (0, _jquery2.default)(".section").append('<div id=\'results\'><a href=\'http://en.wikipedia.org/wiki/\' ' + encodeURIComponent(item.title) + '> <h4> ' + item.title + ' </h4>  ' + item.snippet + ' </a></div>');
+	        (0, _jquery2.default)(".section").append('<div id=\'results\'><a href=\'http://en.wikipedia.org/wiki/' + item.title + '\' ' + encodeURIComponent(item.title) + '> <h4> ' + item.title + ' </h4>  ' + item.snippet + ' </a></div>');
 	        (0, _jquery2.default)("div #results a[href^='http://']").attr("target", "_blank");
 	      });
 	    });
