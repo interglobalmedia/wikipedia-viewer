@@ -1,3 +1,5 @@
+# Wikipedia Viewer
+
 This was a project I created for **Free Code Camp***  called **"Wikipedia Viewer"**.
 
 **Objective:** Build an app that is functionally similar to [Wikipedia Viewer](https://codepen.io/FreeCodeCamp/full/wGqEga/).
