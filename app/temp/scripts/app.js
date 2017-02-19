@@ -10296,7 +10296,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _jquery = __webpack_require__(1);
@@ -10309,25 +10309,25 @@
 	// Making a normal json request to wikipedia would result in a cross origin or cross site error
 	// because wikipedia servers forbid cross origin requests.
 	function wikiViewer() {
-	  (0, _jquery2.default)('#searchterm').keyup(function (e) {
-	    // query variable
-	    var q = (0, _jquery2.default)("#searchterm").val();
-	    _jquery2.default.getJSON("http://en.wikipedia.org/w/api.php?callback=?", {
-	      // srsearch param: search for all page titles (or content)
-	      // that have this value. https://www.mediawiki.org/wiki/API:Search
-	      srsearch: q,
-	      action: "query",
-	      list: "search",
-	      format: "json"
-	    }, function (data) {
-	      var el = 'Results for <b> ' + q + ' </b>';
-	      (0, _jquery2.default)(".section").empty().append(el);
-	      _jquery2.default.each(data.query.search, function (i, item) {
-	        (0, _jquery2.default)(".section").append('<div id=\'results\'><a href=\'http://en.wikipedia.org/wiki/' + item.title + '\' ' + encodeURIComponent(item.title) + '> <h4> ' + item.title + ' </h4>  ' + item.snippet + ' </a></div>');
-	        (0, _jquery2.default)("div #results a[href^='http://']").attr("target", "_blank");
-	      });
+	    (0, _jquery2.default)('#searchterm').keyup(function (e) {
+	        // query variable
+	        var q = (0, _jquery2.default)("#searchterm").val();
+	        _jquery2.default.getJSON("http://en.wikipedia.org/w/api.php?callback=?", {
+	            // srsearch param: search for all page titles (or content)
+	            // that have this value. https://www.mediawiki.org/wiki/API:Search
+	            srsearch: q,
+	            action: "query",
+	            list: "search",
+	            format: "json"
+	        }, function (data) {
+	            var el = 'Results for <b> ' + q + ' </b>';
+	            (0, _jquery2.default)(".section").empty().append(el);
+	            _jquery2.default.each(data.query.search, function (i, item) {
+	                (0, _jquery2.default)(".section").append('<div id=\'results\'><a href=\'http://en.wikipedia.org/wiki/' + item.title + '\' ' + encodeURIComponent(item.title) + '> <h4> ' + item.title + ' </h4>  ' + item.snippet + ' </a></div>');
+	                (0, _jquery2.default)("div #results a[href^='http://']").attr("target", "_blank");
+	            });
+	        });
 	    });
-	  });
 	}
 	exports.default = wikiViewer;
 	/* /* What needs to be done in this program:
