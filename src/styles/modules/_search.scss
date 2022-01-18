@@ -9,12 +9,15 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    p {
+      margin-top: 25px;
+    }
   }
 }
 
 .search-input {
   width: 95%;
-  max-width: 800px;
+  max-width: 600px;
   border-radius: 3px;
   padding: 10px;
   border: 1px solid var(--border-color);
@@ -25,6 +28,53 @@
 .search-input:active {
   border-color: #36c;
   outline: none;
+  margin: 0;
+  color: $ghostWhite;
+  padding-top: 0.25rem;
+}
+
+.search-form {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  margin: 1.5rem 0 1rem;
+  padding: 7px 9px 0 9px;
+  border: 3px solid $ghostWhite;
+  border-radius: 35px;
+  transition: all 200ms ease;
+  cursor: text;
+
+  .search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline-width: 0;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    right: -5px;
+    top: 21px;
+    background: $ghostWhite;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+  }
+
+  &.active,
+  &:hover {
+    max-width: 600px;
+    width: 97.5%;
+    margin-right: 0;
+    height: 50px;
+
+    &:after {
+      height: 0;
+    }
+  }
 }
 
 
