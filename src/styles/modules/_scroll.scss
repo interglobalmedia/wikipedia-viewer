@@ -1,0 +1,35 @@
+/*  scroll */
+.scroll {
+    position: fixed;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: $mainOrange;
+    font-size: 3.5rem;
+    text-decoration: none;
+    z-index: 1000;
+    background: transparent;
+
+    &.bottom {
+        top: 0.25rem;
+        right: 1rem;
+    }
+
+    &.top {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+button.scroll.bottom {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.material-icons {
+    font-size: 4rem;
+}
