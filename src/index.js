@@ -10,8 +10,7 @@ clearResults.addEventListener('keydown', function (e) {
     const chord = e.keyCode || e.which;
     if (chord === 8) {
         e.currentTarget.value = '';
-        const searchResults = document.querySelector('.js-search-results');
-        searchResults.innerHTML = ``;
+        document.location.reload();
     }
 })
 
