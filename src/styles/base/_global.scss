@@ -32,7 +32,9 @@ a {
 }
 
 p {
-  color: $ghostWhite;;
+  color: $ghostWhite;
+  font-size: 1.125rem;
+  letter-spacing: 0.07rem;
 }
 
 .wrapper {
@@ -40,5 +42,6 @@ p {
     margin-top: 3rem;
     text-align: center;
     color: $ghostWhite;
+    letter-spacing: 0.07rem;
   }
 }
