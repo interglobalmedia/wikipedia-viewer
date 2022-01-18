@@ -2,8 +2,8 @@
 .scroll {
     position: fixed;
     right: 0;
-    width: 45px;
-    height: 45px;
+    width: $icon-size;
+    height: $icon-size;
     display: block;
     text-align: center;
     line-height: 45px;
@@ -11,10 +11,22 @@
     font-size: 3.5rem;
     text-decoration: none;
     z-index: 1000;
-    background: transparent;
-
+    background: $mainBlue;
+    border-radius: $icon-size*$border-radius;
+	overflow: hidden;
+    &::before, &::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: all 0.25s ease;
+		border-radius: $icon-size*$border-radius;
+        background: transparent;
+    }
     &.bottom {
-        top: 0.25rem;
+        top: 1rem;
         right: 1rem;
     }
 
@@ -28,8 +40,29 @@ button.scroll.bottom {
     cursor: pointer;
     outline: none;
     border: none;
+    &.material-icons {
+        margin-top: $icon-size/20;
+    }
 }
 
 .material-icons {
     font-size: 4rem;
+    position: relative;
+    color: $ghostWhite;
+    font-size: $icon-font;
+    margin-top: $icon-size/8;
+    transition: all 0.25s ease;
+}
+
+.icon-expand{
+	&::after{
+		box-shadow: inset 0 0 0 1px $mainOrange;
+	}
+	&::before{
+		background: $mainOrange;
+		box-shadow: inset 0 0 0 $icon-size $iconBackground;
+	}
+	&:hover::before {
+		box-shadow: inset 0 0 0 1px $iconBackground;
+	}
 }
