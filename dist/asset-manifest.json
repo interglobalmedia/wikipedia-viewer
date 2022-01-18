@@ -1,0 +1,10 @@
+{
+  "main.css": "auto/styles/main.a406c5dec6ea9b9a9e08.css",
+  "main.js": "auto/scripts/main.73ec74cff4d42afe8a5e.chunk.js",
+  "runtime.js": "auto/scripts/runtime.d444ad0689c7e1fa0097.chunk.js",
+  "scripts/981.chunk.js": "auto/scripts/981.e68e6bd137967e29d1c8.chunk.js",
+  "workbox-f683aea5.js": "auto/workbox-f683aea5.js",
+  "../dist/favicon.ico": "auto/../dist/favicon.ico",
+  "index.html": "auto/index.html",
+  "sw.js": "auto/sw.js"
+}
