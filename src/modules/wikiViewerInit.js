@@ -28,6 +28,8 @@ function wikiViewerInit() {
 
         results.query.search.forEach(result => {
             const url = `https://en.wikipedia.org/?curid=${result.pageid}`;
+            const paraHide = document.querySelector('p');
+            paraHide.style.display= `none`;
             searchResults.insertAdjacentHTML(
                 'beforeend',
                 `<div class="result-item">
