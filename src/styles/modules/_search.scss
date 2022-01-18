@@ -1,0 +1,30 @@
+
+.center {
+  display: table;
+  width: 100%;
+  height: 100%;
+  color: $mainGrey;
+
+  .center-inner {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.search-input {
+  width: 95%;
+  max-width: 800px;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 18px;
+}
+
+.search-input:focus,
+.search-input:active {
+  border-color: #36c;
+  outline: none;
+}
+
+
