@@ -7,11 +7,11 @@ section.search-results {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 10%;
-  // text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 97.5%;
 
   .result-item {
     top: 5px;
