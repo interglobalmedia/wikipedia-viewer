@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: Lato, sans-serif;
-  background: $mainBlue;
+  background: $main-blue;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -21,18 +21,18 @@ body {
   min-height: 100vh;
 }
 
-.Site-content {
+.site-content {
   flex: 1;
   width: 100%;
 }
 
 a {
-  color: $mainOrange;
+  color: $main-orange;
   font-weight: 600;
 }
 
 p {
-  color: $ghostWhite;
+  color: $ghost-white;
   font-size: 1.125rem;
   letter-spacing: 0.07rem;
 }
@@ -41,7 +41,7 @@ p {
   & h1 {
     margin-top: 3rem;
     text-align: center;
-    color: $ghostWhite;
+    color: $ghost-white;
     letter-spacing: 0.07rem;
   }
 }
