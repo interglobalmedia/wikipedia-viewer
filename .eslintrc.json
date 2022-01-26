@@ -3,11 +3,11 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "node": true,
-        "serviceworker": true
+        "node": false,
+        "serviceworker": false
     },
     "extends": [
-        "prettier"
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2021,
