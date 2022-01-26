@@ -5,11 +5,12 @@
 
   a {
     text-decoration: none;
-    color: $mainOrange;
+    color: $main-orange;
     font-weight: 600;
     letter-spacing: 0.06em;
   }
+
   a:hover {
-    color: $ghostWhite;
+    color: $ghost-white;
   }
 }
